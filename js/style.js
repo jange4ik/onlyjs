@@ -133,6 +133,7 @@ margin-bottom: 5px;
 document.querySelector('.footer-subtitle').style.cssText=`
 font-size: 30px;
 margin: 0;
+margin-bottom: 10px;
 `; 
 document.querySelector('.footer-nav').style.cssText=`
 display:flex;
@@ -146,18 +147,24 @@ display:flex;
 font-size:20px;
 align-items: center;
 gap:5px;
+text-decoration:none;
+color:black;
 `; 
 document.querySelector('.telegram-link').style.cssText=`
 display:flex;
 font-size:20px;
 align-items: center;
 gap:5px;
+text-decoration:none;
+color:black;
 `; 
 document.querySelector('.vk-link').style.cssText=`
 display:flex;
 font-size:20px;
 align-items: center;
 gap:5px;
+text-decoration:none;
+color:black;
 `; 
 
 /*

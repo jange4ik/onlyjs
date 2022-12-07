@@ -46,8 +46,8 @@ footerContent.innerHTML += `
 <h3 class="footer-title">ONLY JS</h3>
 <p class="footer-subtitle">Полезные ссылки</p>
 <nav class="footer-nav">
-    <a class="github-link" href="">Исходный код<img src="assets/github.png" width="20px" height="20px"></a>
-    <a class="telegram-link">Мой ТГК<img src="assets/telegram.png" width="20px" height="20px"></a>
-    <a class="vk-link">Мой ВК<img src="assets/vk.png" width="20px" height="20px"></a>
+    <a class="github-link" href="https://github.com/jange4ik/onlyjs">Исходный код<img src="assets/github.png" width="20px" height="20px"></a>
+    <a class="telegram-link" href="https://t.me/stuwebit">Мой ТГК<img src="assets/telegram.png" width="20px" height="20px"></a>
+    <a class="vk-link" href="https://vk.com/cringegidrogeneratordegenerat228">Мой ВК<img src="assets/vk.png" width="20px" height="20px"></a>
 </nav>
 `
