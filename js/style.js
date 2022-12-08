@@ -2,6 +2,7 @@
 document.querySelector('.body').style.cssText=`
 font-family: 'Source Sans Pro', sans-serif;
 margin: 0;
+overflow-x: hidden;
 `;
 
 /* Header */
@@ -41,6 +42,7 @@ flex-direction: column;
 `; 
 document.querySelector('.main-content').style.cssText=`
 margin: 50px 0;
+max-width: 95%;
 `; 
 document.querySelector('.main-topic').style.cssText=`
 font-size:50px;
@@ -139,6 +141,8 @@ document.querySelector('.footer-nav').style.cssText=`
 display:flex;
 flex-direction: row;
 gap: 25px;
+flex-wrap: wrap;
+justify-content:center;
 `; 
 
 /* Links */
