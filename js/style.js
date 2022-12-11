@@ -109,6 +109,8 @@ document.querySelector('.markup-subtitle').style.cssText=`
 font-size: 30px;
 padding: 0;
 margin :0;
+max-width: 1400px;
+white-space: pre-line;
 `; 
 document.querySelector('.markup-png').style.cssText=`
 border: 3px solid black;

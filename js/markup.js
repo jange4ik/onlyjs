@@ -21,7 +21,7 @@ metaViewport.setAttributeNode(content)
 
 let title = document.createElement('title')
 head.appendChild(title)
-title.innerHTML = ('Only JS')
+title.textContent = 'Only JS'
 
 let linkFonts = document.createElement('link')
 head.appendChild(linkFonts)
@@ -47,68 +47,184 @@ linkFontsStyle.setAttributeNode(rel.cloneNode(true))
 href.value='https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap'
 rel.value='stylesheet'
 
-body.innerHTML += `<header></header><main></main><footer></footer>`
-let header = document.querySelector('header')
-let main = document.querySelector('main')
-let footer = document.querySelector('footer')
+let header = document.createElement('header')
+body.appendChild(header)
 
-// let p = document.createElement('img');
-// let a = document.createAttribute('src')
-// let width = document.createAttribute('width')
-// a.value="assets/github.png"
-// width.value="20px"
-// p.innerHTML = ('Привет, Мир!');
-// body.appendChild(p);
-// p.className = 'hello-world'
-// p.setAttributeNode(a)
-// p.setAttributeNode(width)
+let headerTitle = document.createElement('div')
+header.appendChild(headerTitle)
+headerTitle.className = ('header-title')
+
+let headerTopic = document.createElement('h1')
+headerTitle.appendChild(headerTopic)
+headerTopic.className = ('header-topic')
+headerTopic.textContent = 'ONLY JS'
+
+let headerSubtitle = document.createElement('p')
+headerTitle.appendChild(headerSubtitle)
+headerSubtitle.className = ('header-subtitle')
+headerSubtitle.textContent = 'Сайт написанный полностью на JS'
 
 
-header.innerHTML += `
-<div class="header-title">
-    <h1 class="header-topic">ONLY JS</h1>
-    <p class="header-subtitle">Сайт написанный полностью на JS</p>
-</div>`
+let main = document.createElement('main')
+body.appendChild(main)
 
-main.innerHTML +=`
-<section class="main-content">
-    <h2 class="main-topic">Как это сделано?</h2>
-</section>`
-let mainContent = document.querySelector('.main-content')
+let mainContent = document.createElement('section')
+main.appendChild(mainContent)
+mainContent.className = ('main-content')
 
-mainContent.innerHTML += `
-<article class="html-content">
-    <h3 class="html-title">HTML</h3>
-    <img class="html-png" src="assets/html.png" max-width="1400px" max-height="375px" alt="html">
-    <p class="html-subtitle">HTML Используется лишь для запуска сайта и JS</p>
-</article>`
+let mainTopic = document.createElement('h2')
+mainContent.appendChild(mainTopic)
+mainTopic.textContent = ('Как это сделано?')
+mainTopic.className = ('main-topic')
 
-mainContent.innerHTML += `
-<article class="style-content">
-    <h3 class="style-title">Стили</h3>
-    <img class="style-png" src="assets/style.png" max-width="1400px" max-height="223px" alt="style">
-    <p class="style-subtitle">Все стили написаны по примеру на картинке</p>
-</article>`
+let htmlContent = document.createElement('article')
+mainContent.appendChild(htmlContent)
+htmlContent.className = ('html-content')
 
-mainContent.innerHTML += `
-<article class="markup-content">
-    <h3 class="markup-title">Разметка</h3>
-    <img class="markup-png" src="assets/markup.png" max-width="1400px" max-height="470" alt="markup">
-    <p class="markup-subtitle">Вся разметка написана при помощи переменных и InnerHTML</p>
-</article>`
+let htmlTitle = document.createElement('h3')
+htmlContent.appendChild(htmlTitle)
+htmlTitle.textContent = 'HTML'
+htmlTitle.className = ('html-title')
 
-footer.innerHTML += `
-<section class="footer-content">
-</section>
-`
-let footerContent = document.querySelector('.footer-content')
+let src = document.createAttribute('src')
+let maxWidth = document.createAttribute('max-width')
+let maxHeight = document.createAttribute('max-height')
+let alt = document.createAttribute('alt')
 
-footerContent.innerHTML += `
-<h3 class="footer-title">ONLY JS</h3>
-<p class="footer-subtitle">Полезные ссылки</p>
-<nav class="footer-nav">
-    <a class="github-link" href="https://github.com/jange4ik/onlyjs">Исходный код<img src="assets/github.png" width="20px" height="20px"></a>
-    <a class="telegram-link" href="https://t.me/stuwebit">Мой ТГК<img src="assets/telegram.png" width="20px" height="20px"></a>
-    <a class="vk-link" href="https://vk.com/cringegidrogeneratordegenerat228">Мой ВК<img src="assets/vk.png" width="20px" height="20px"></a>
-</nav>
-`
+let htmlPng = document.createElement('img')
+htmlContent.appendChild(htmlPng)
+htmlPng.className = ('html-png')
+src.value = "assets/html.png"
+maxWidth.value = "1400px"
+maxHeight.value = "223px"
+alt.value = "html"
+htmlPng.setAttributeNode(src.cloneNode(true))
+htmlPng.setAttributeNode(maxWidth.cloneNode(true))
+htmlPng.setAttributeNode(maxHeight.cloneNode(true))
+htmlPng.setAttributeNode(alt.cloneNode(true))
+
+let htmlSubtitle = document.createElement('p')
+htmlContent.appendChild(htmlSubtitle)
+htmlSubtitle.className = ('html-subtitle')
+htmlSubtitle.textContent = "HTML Используется лишь для запуска сайта и JS"
+
+let styleContent = document.createElement('article')
+mainContent.appendChild(styleContent)
+styleContent.className = ('style-content')
+
+let styleTitle = document.createElement('h3')
+styleContent.appendChild(styleTitle)
+styleTitle.textContent = "Стили"
+styleTitle.className = "style-title"
+
+let stylePng = document.createElement('img')
+styleContent.appendChild(stylePng)
+stylePng.className = "style-png"
+src.value = 'assets/style.png'
+maxHeight.value = '274px'
+alt.value = "style"
+stylePng.setAttributeNode(src.cloneNode(true))
+stylePng.setAttributeNode(maxWidth.cloneNode(true))
+stylePng.setAttributeNode(maxHeight.cloneNode(true))
+stylePng.setAttributeNode(alt.cloneNode(true))
+
+let styleSubtitle = document.createElement('p')
+styleContent.appendChild(styleSubtitle)
+styleSubtitle.textContent = "Все стили написаны по примеру на картинке"
+styleSubtitle.className = "style-subtitle"
+
+let markupContent = document.createElement('article')
+mainContent.appendChild(markupContent)
+markupContent.className = ('markup-content')
+
+let markupTitle = document.createElement('h3')
+markupContent.append(markupTitle)
+markupTitle.className = 'markup-title'
+markupTitle.textContent = "Разметка"
+
+let markupPng = document.createElement('img')
+markupContent.appendChild(markupPng)
+markupPng.className = 'markup-png'
+src.value = 'assets/markup.png'
+maxHeight.value = "369"
+alt.value="markup"
+markupPng.setAttributeNode(src.cloneNode(true))
+markupPng.setAttributeNode(maxWidth.cloneNode(true))
+markupPng.setAttributeNode(maxHeight.cloneNode(true))
+markupPng.setAttributeNode(alt.cloneNode(true))
+
+let markupSubtitle = document.createElement('p')
+markupContent.appendChild(markupSubtitle)
+markupSubtitle.className = ("markup-subtitle")
+markupSubtitle.textContent = "Вся разметка написана при помощи переменных, createElement, createAttribute, className, textContent и appendChild. \n (Хорошим примером стал кусок кода картинки выше)."
+
+let footer = document.createElement('footer')
+body.appendChild(footer)
+
+let footerContent = document.createElement('section')
+footer.appendChild(footerContent)
+footerContent.className = ("footer-content")
+
+let footerTitle = document.createElement('h3')
+footerContent.appendChild(footerTitle)
+footerTitle.className = ("footer-title")
+footerTitle.textContent = "ONLY JS"
+
+let footerSubtitle = document.createElement('p')
+footerContent.appendChild(footerSubtitle)
+footerSubtitle.className = ('footer-subtitle')
+footerSubtitle.textContent = 'Полезные ссылки'
+
+let footerNav = document.createElement('nav')
+footerContent.appendChild(footerNav)
+footerNav.className = ('footer-nav')
+
+let hrefAtt = document.createAttribute('href')
+
+let githubLink = document.createElement('a')
+footerNav.appendChild(githubLink)
+githubLink.className = ('github-link')
+githubLink.textContent = "Исходный код"
+hrefAtt.value = 'https://github.com/jange4ik/onlyjs'
+githubLink.setAttributeNode(hrefAtt.cloneNode(true))
+
+let width = document.createAttribute('width')
+let height = document.createAttribute ('height')
+
+let githubPng = document.createElement('img')
+githubLink.appendChild(githubPng)
+src.value = 'assets/github.png'
+width.value = "20px"
+height.value = "20px"
+githubPng.setAttributeNode(src.cloneNode(true))
+githubPng.setAttributeNode(width.cloneNode(true))
+githubPng.setAttributeNode(height.cloneNode(true))
+
+
+let telegramLink = document.createElement('a')
+footerNav.appendChild(telegramLink)
+telegramLink.className = ('telegram-link')
+telegramLink.textContent = "Мой ТГК"
+hrefAtt.value = 'https://t.me/stuwebit'
+telegramLink.setAttributeNode(hrefAtt.cloneNode(true))
+
+let telegramPng = document.createElement('img')
+telegramLink.appendChild(telegramPng)
+src.value = 'assets/telegram.png'
+telegramPng.setAttributeNode(src.cloneNode(true))
+telegramPng.setAttributeNode(width.cloneNode(true))
+telegramPng.setAttributeNode(height.cloneNode(true))
+
+let vkLink = document.createElement('a')
+footerNav.appendChild(vkLink)
+vkLink.className = ('vk-link')
+vkLink.textContent = "Мой ВК"
+hrefAtt.value = 'https://vk.com/cringegidrogeneratordegenerat228'
+vkLink.setAttributeNode(hrefAtt.cloneNode(true))
+
+let vkPng = document.createElement('img')
+vkLink.appendChild(vkPng)
+src.value = 'assets/vk.png'
+vkPng.setAttributeNode(src.cloneNode(true))
+vkPng.setAttributeNode(width.cloneNode(true))
+vkPng.setAttributeNode(height.cloneNode(true))
