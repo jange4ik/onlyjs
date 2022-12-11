@@ -1,6 +1,14 @@
 let body = document.querySelector('body')
 body.className = 'body'
 
+let src = document.createAttribute('src')
+let defer = document.createAttribute('defer')
+let script = document.createElement('script')
+src.value = "js/style.js"
+script.setAttributeNode(src.cloneNode(true))
+script.setAttributeNode(defer.cloneNode(true))
+body.appendChild(script)
+
 let head = document.querySelector('head')
 
 let metaCharset = document.createElement('meta')
@@ -86,7 +94,6 @@ htmlContent.appendChild(htmlTitle)
 htmlTitle.textContent = 'HTML'
 htmlTitle.className = ('html-title')
 
-let src = document.createAttribute('src')
 let maxWidth = document.createAttribute('max-width')
 let maxHeight = document.createAttribute('max-height')
 let alt = document.createAttribute('alt')
@@ -96,7 +103,7 @@ htmlContent.appendChild(htmlPng)
 htmlPng.className = ('html-png')
 src.value = "assets/html.png"
 maxWidth.value = "1400px"
-maxHeight.value = "223px"
+maxHeight.value = "189px"
 alt.value = "html"
 htmlPng.setAttributeNode(src.cloneNode(true))
 htmlPng.setAttributeNode(maxWidth.cloneNode(true))
