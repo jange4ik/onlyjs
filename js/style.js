@@ -1,5 +1,5 @@
 /* Body */
-document.querySelector('.body').style.cssText=`
+document.querySelector('body').style.cssText=`
 font-family: 'Source Sans Pro', sans-serif;
 margin: 0;
 overflow-x: hidden;

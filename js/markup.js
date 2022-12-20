@@ -103,7 +103,7 @@ htmlContent.appendChild(htmlPng)
 htmlPng.className = ('html-png')
 src.value = "assets/html.png"
 maxWidth.value = "1400px"
-maxHeight.value = "189px"
+maxHeight.value = "151px"
 alt.value = "html"
 htmlPng.setAttributeNode(src.cloneNode(true))
 htmlPng.setAttributeNode(maxWidth.cloneNode(true))
