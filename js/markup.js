@@ -212,7 +212,7 @@ let telegramLink = document.createElement('a')
 footerNav.appendChild(telegramLink)
 telegramLink.className = ('telegram-link')
 telegramLink.textContent = "Мой ТГК"
-hrefAtt.value = 'https://t.me/stuwebit'
+hrefAtt.value = 'https://t.me/eternalcoding'
 telegramLink.setAttributeNode(hrefAtt.cloneNode(true))
 
 let telegramPng = document.createElement('img')
@@ -226,7 +226,7 @@ let vkLink = document.createElement('a')
 footerNav.appendChild(vkLink)
 vkLink.className = ('vk-link')
 vkLink.textContent = "Мой ВК"
-hrefAtt.value = 'https://vk.com/cringegidrogeneratordegenerat228'
+hrefAtt.value = 'https://vk.com/8a6e5e4cfa774f4a8b9dae1288b0'
 vkLink.setAttributeNode(hrefAtt.cloneNode(true))
 
 let vkPng = document.createElement('img')
